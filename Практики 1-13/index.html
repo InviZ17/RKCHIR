@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <div class="base" style="display:none;">
+        <div class="dropdown">
+            <button class="dropbtn">ddd</button>
+            <ol class="dropdown-content">
+                <div class="dropdown_line">
+                    <div class="base icon"></div>
+                </div>
+                <li><a href="#">Уведомление 1</a></li>
+                <li><a href="#">Уведомление 2</a></li>
+                <li><a href="#">Уведомление 3</a></li>
+            </ol>
+        </div>
+        <div class="indicator">
+            3
+        </div>
+    </div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <link rel="stylesheet" href="style.css">
+    <!--Заголовок страницы-->
+    <title>Погода на месяц</title>
+
+    <!--Фавикон-->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div id ="Begining"></div>
+    <header>
+        
+        <!--Заголовок с якорем-->
+        <div class="norm">
+        <div id="Begining" class="title"> Погода на месяц</div>
+        
+        <nav>     
+        <a class="block" href="#End">Вниз</a>
+        <a class="block" href="index.html"> Главная</a>
+        <a class="block" href="auth.html">Войти</a>
+        </nav>
+        </div>
+    </header>
+
+    <div class="hamburger-menu">
+        <input id="menu_toggle" type="checkbox" />
+        <label class="menu_btn" for="menu_toggle">
+            <span></span>
+        </label>
+        <ul class="menu_box">
+        <li><a class="menu-item" href="#End">Вниз</a></li>
+        <li><a class="menu-item" href="index.html"> Главная</a></li>
+        <li><a class="menu-item" href="auth.html">Войти</a></li>
+        </ul>
+    </div>
+    
+
+    <main>
+        <div class="gallery2">
+            <div id="main_image" class="main_image"><img></div>
+            <div class="images_list" onclick="changeMainImage(event)">
+                <img src="images/instagram.png">
+                <img src="images/telegram.png">
+                <img src="images/twitter.png">
+                <img src="images/vk.png">
+            </div>
+        </div>
+
+        <div class="third">
+            <ul onclick="selectElements(event)" id="list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+        </div>
+        
+        <div class="forth">
+            <div id="slideContainer" class="slider">
+                <span id="slide" class="slide"></span>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="shop1">
+                <div class="item"><img src="images/4.jpg">
+                    <span>Термометр</span>
+                    <span class="cost">100₽</span>
+                </div>
+                <div class="item"><img src="images/5.jpg">
+                    <span>Барометр</span>
+                    <span class="cost">200₽</span>
+                </div>
+                <div class="item"><img src="images/6.png">
+                    <span>Календарь</span>
+                    <span class="cost">50₽</span>
+                </div>
+            </div>
+            <div id="kart" class="kart" onmouseover="placeable = true" onmouseout="placeable = false">
+                <span id="totalCost" class="totalCost">0</span>
+            </div>
+        </div>
+    <h3>Пользовательский список</h2>
+      <div class="create-list"></div> 
+    <div class="notif"></div>
+
+    <section class="center-picture">
+        <h3>Область с картинкой</h3>
+        <div class="area">
+            <img src="images/Center.jpg" width="100px" height="100px">
+        </div>
+        <div class="where-click">
+            <p>Координаты нажатия мыши:</p>
+            <p class="clickX">x = <span>?</span> px</p>
+            <p class="clickY">y = <span>?</span> px</p>
+        </div>
+    </section>
+
+    <section class="close-notif">
+        <h4>Возможность закрыть уведомления</h4>
+        <div class="notifs">
+            <button class="notif__btn" type="button">
+                <div class="base1">
+                    <div class="indicator1">
+                        0
+                    </div>
+                </div>
+            </button>
+
+            <div class="notif__inner">
+            </div>
+        </div>
+    </section>
+    <section class="firstParagraph">
+        <div class="glassmorphism">
+            <div class="glassmorphism_box">
+                <span></span>
+                <div class="glassmorphism_content">
+                    <h2>Заголовок</h2>
+                    <p>Undes ed eveniet, minus dolorem a labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!--<a href="#">Подробнее</a>-->
+                </div>
+            </div>
+
+            <div class="glassmorphism_box">
+                <span></span>
+                <div class="glassmorphism_content">
+                    <h2>Заголовок</h2>
+                    <p>Undes ed eveniet, minus dolorem a labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!--<a href="#">Подробнее</a>-->
+                </div>
+            </div>
+
+            <div class="glassmorphism_box">
+                <span></span>
+                <div class="glassmorphism_content">
+                    <h2>Заголовок</h2>
+                    <p>Undes ed eveniet, minus dolorem a labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!--<a href="#">Подробнее</a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="moving_line">
+            <div class="around-line">
+                <h2>Заголовок 1</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magni ipsam cumque quam iste consequatur corporis ab velit quis voluptatibus! Perferendis sed neque autem tempore maiores voluptates incidunt, recusandae sunt.</p>
+            </div>
+
+            <div class="around-line">
+                <h2>Заголовок 2</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magni ipsam cumque quam iste consequatur corporis ab velit quis voluptatibus! Perferendis sed neque autem tempore maiores voluptates incidunt, recusandae sunt.</p>
+            </div>
+            <div class="around-line">
+                <h2>Заголовок 3</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magni ipsam cumque quam iste consequatur corporis ab velit quis voluptatibus! Perferendis sed neque autem tempore maiores voluptates incidunt, recusandae sunt.</p>
+            </div>
+        </div>
+
+
+        <div class="blur_boxes">
+            <div class="container">
+                <div class="card">
+                    <div class="circle">
+                        <h2>01</h2>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magni ipsam cumque quam iste consequatur corporis ab velit quis voluptatibus!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="circle">
+                        <h2>02</h2>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magni ipsam cumque quam iste consequatur corporis ab velit quis voluptatibus!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="circle">
+                        <h2>03</h2>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magni ipsam cumque quam iste consequatur corporis ab velit quis voluptatibus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+        <div class="grid">
+
+            <div class="item1">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel quis natus earum, nulla repellat expedita! Natus, officiis sequi?</p>
+            </div>
+
+            <div class="item2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel quis natus earum, nulla repellat expedita! Natus, officiis sequi?</p>
+            </div>
+
+            <div class="item3">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel quis natus earum, nulla repellat expedita! Natus, officiis sequi?</p>
+            </div>
+
+            <div class="item4">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel?</p>
+            </div>
+
+            <div class="item5">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel quis natus earum, nulla repellat expedita! Natus, officiis sequi?</p>
+            </div>
+
+            <div class="item6">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel?</p>
+            </div>
+
+            <div class="item7">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus in dolor atque molestiae? Labore accusamus voluptatibus ex dignissimos explicabo culpa vel quis natus earum, nulla repellat expedita! Natus, officiis sequi?</p>
+            </div>
+
+        </div>
+        </div>
+
+    <p><img src="rain.png" class="image">
+        <img src="rain2.png" class="image2">
+        Погода — совокупность значений метеорологических элементов и атмосферных явлений, наблюдаемых в определённый момент времени в той или иной точке пространства.
+        Понятие «Погода» относится к текущему состоянию атмосферы, в противоположность понятию «Климат», которое относится к среднему состоянию атмосферы за длительный период времени. 
+        Если нет уточнений, то под термином «Погода» понимают погоду на Земле.
+        Погодные явления протекают в тропосфере (нижней части атмосферы) и в стратосфере — атмосферном слое, располагающемся на высоте примерно от 11 до 50 километров.
+        Погоду можно описать давлением, температурой и влажностью воздуха, силой и направлением ветра, облачностью, атмосферными осадками, дальностью видимости, атмосферными явлениями (туманами, метелями, грозами) и другими метеорологическими элементами.</p>
+        <div class="video">
+        <p> Гифка, на которой изображены удары молний во время грозы </p>
+        <iframe src="video.html" 
+        width="320" height="180">
+            
+        </iframe>
+        </div>
+    </section>
+
+
+
+    <article>
+    <p class="ff">Погода может быть показана например в виде карты:</p>
+    <!--Изображение по ссылке-->
+    <div class="images">
+    <img src="https://www.pogoda.msk.ru/maps/rus_msk_tmp2m_msk_pmsk_9.jpg" alt="Карта погоды" title ="Карта погоды" width="300" heigth="300">
+    
+    <!--Карта изображения-->
+    <img src="clickable_map.png" usemap="#shapes" class="image3">
+
+    <map name="shapes">
+        <area shape="circle" coords="90,213,30" href="https://www.gismeteo.ru/weather-moscow-4368/">
+        <area shape="rectangle" coords="310,75,410,100" href="https://www.gismeteo.ru/weather-arkhangelsk-3915/">
+        <area shape="polygon" coords="120,56,177,119,226,92,168,54,197,10,170,1,157,24,124,15" href="https://www.gismeteo.ru/weather-sankt-peterburg-4079/"><br>
+    </div>
+    <p>Либо в виде списка (Примером является сайт <a href="https://www.gismeteo.ru/weather-moscow-4368/tomorrow/">Gismeteo</a>):</p>
+    <!--Изображение из файла-->
+    <div class ="images">
+    <img src="weather.png">
+    </div>
+    </article>
+
+
+    <section>
+    <p>Итак, к делу. Начнем с некоторых терминов которые будут использоваться далее.</p>
+
+        <!--Заголовок 3-го уровня-->
+        <h3>Основные термины</h3>
+        
+        <!--Список терминов-->
+        <dl>
+            <dt><abbr>C</abbr><sup>o</sup></dt>
+            <dd>означает градусы Цельсия.</dd>
+            <dt><abbr>м/с</abbr></dt>
+            <dd>метров в секунду. В них измеряется скорость ветра</dd>
+            <dt><abbr>мм. рт. ст.</abbr></dt>
+            <dd>милиметров ртутного столба. В них измеряются осадки. Также существуют мм.вд.ст., mm H<sub>2</sub>O. Но они практически не используются.</dd> 
+        </dl>   
+
+    <!--Заголоаок 3-го уровня-->            
+    <h3>Список доступных городов</h3>
+
+        <!--Вложенный список-->
+        <ol type="A",start="A">
+            <li>Запад:
+                <ol type="1",start="1">
+                <li>Москва</li>
+                <li>Санкт-Петербург</li></ol></li>
+            <li>Восток:
+                <ol type="1",start="1">
+                    <li>Владивосток</li>
+                </ol></li>
+            <li>Юг:
+                <ol type="1",start="1">
+                    <li>Сочи</li>
+                </ol>
+            </li>
+            </ol>
+    </section>
+    <h2>Опрос</h2>
+    <form method="get" id="Form">
+        <fieldset>
+        <legend> 1) Введите свой email</legend>
+        <input required type="email" placeholder="example@gmail.com" size="20">
+        </fieldset>
+        <fieldset>
+            <legend>2) Когда ваш день рождения?</legend>
+            <input size="8" type="date" value="2022-10-10" max="2022-10-10">
+        </fieldset>
+        <fieldset>
+            <legend>3) Как часто вы смотрите прогноз погоды?</legend>
+            <label><input required type="radio" name="first">
+                Каждый день
+            </label>
+            <label><input type="radio" name="first">
+                Раз в неделю
+            </label>
+            <label><input type="radio" name="first">
+                Раз в месяц
+            </label>
+            <label><input type="radio" name="first">
+                Раз в год
+            </label>
+        </fieldset>
+        <fieldset>
+        <legend> 4) Какими источниками информации вы пользуетесь для просмотра прогноза погоды?</legend>
+            <label><input type="checkbox" name="second"  checked>
+                Сайты в Интернете
+            </label>
+            <label><input type="checkbox" name="second">
+                Передачи по телевизору
+            </label>
+            <label><input type="checkbox" name="second">
+                Газеты
+            </label>
+        </fieldset>
+        <fieldset>
+        <legend>5) Напишите свой отзыв об этом сайте</legend>
+        <textarea cold="5" rows="3" placeholder="Мне очень понравился этот сайт"></textarea>
+        </fieldset>
+        
+        <!--<input type="password"></input>-->
+        <fieldset>
+        <legend>6) Сфотографируйте погоду за окном</legend>
+        <input id="file"type="file"></input>
+        </fieldset>
+        <fieldset>
+            <legend>7) Введите свой телефон</legend>
+            <input pattern="[0-9]{11}"type="tel" placeholder="+79031234567">
+        </fieldset>
+        <fieldset>
+        <legend>8) Из какого вы региона?</legend>
+        <select required name="select">
+            <option>Москва</option>
+            <option>Московская область</option>
+            <option>Санкт-Петербург</option>
+            <option>Владивосток</option>
+        </select>
+        </fieldset>
+        
+        <button type ="submit">Отправить</button>
+    </form>
+    <h2>Галлерея</h2>
+    <div class="gallery">
+        <div class="img">
+        <img  src="Gal1.png">
+        <p>Человек под дождем</p>
+        </div>
+        <div class="img">
+        <img src="Gal2.png">
+        <p>Котик смотрит на дождь</p>
+        </div>
+        <div class="img">
+        <img src="Gal3.png">
+        <p>Красивый закат</p>
+        </div>
+        <div class="img">
+        <img src="Gal4.png">
+        <p>Солнечная погода</p>
+        </div>
+        <div class="img">
+        <img src="Gal5.png">
+        <p>Лес в тумане</p>
+        </div>
+        <div class="img">
+        <img src="Gal6.png">
+        <p>Туманное утро</p>
+        </div>
+    </div>
+    </main>
+
+    <aside>
+        <!--Цитата-->
+        <h2>Цитаты</h2>
+        <blockquote> "Не стоит упускать возможность насладиться хорошей погодой"</sup> 
+            <br><cite> Джоан Ролинг</cite></br></blockquote>
+    </aside>
+    
+ 
+    <footer>
+        <div class="contacts">
+            <div class="social">
+                <img src="images/vk.png" alt="">
+            </div>
+            <div class="social">
+                <img src="images/youtube.png" alt="">
+            </div>
+            <div class="social">
+                <img src="images/telegram.png" alt="">
+            </div>
+            <div class="social">
+                <img src="images/instagram.png" alt="">
+            </div>
+            <div class="social">
+                <img src="images/twitter.png" alt="">
+            </div>
+        </div>
+    <!--Кнопка наверх-->
+    <a href="#Begining">Наверх</a>
+    <address>
+    <div id="contents" onclick="confirmRedirect(event)" class="first">
+    <!--Ссылка на почту-->
+    <a href="mailto:maksimenko.viktor2003@mail.ru" style="color:yellow;">maksimenko.viktor2003@mail.ru</a>
+
+    <!--Ссылка на телефон-->
+    <a href="tel:89036467856" style="color:red;">89036467856</a>
+    </div>
+    </address>
+    </footer>
+    <div id="End"></div>
+
+</body>
+<script src="main.js"></script>
+</html>
